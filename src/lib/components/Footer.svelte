@@ -17,6 +17,7 @@
     .footer {
         background-color: var(--primary-black);
         width: 100%;
+        padding-top: 1rem;
     }
     .closing-message {
         margin-top: 2rem;

@@ -58,16 +58,20 @@
 
 <style>
     .connect-with-us {
-        background-color: #f9f9f9;
-        padding: 3rem 1 rem;
-        margin: 2rem 0;
+        background-color: var(--primary-black);
+        padding: 2rem 3rem;
+        margin: 0;
+        border-bottom: 3px solid var(--text-dark);
+        border-top: 3px solid var(--text-dark);
+
     }
     h2 {
         text-align: center;
         font-size: 2.2rem;
         font-family: 'Cormorant Garamond', serif;
         margin-bottom: 2rem;
-        color: #333;
+        color: var(--secondary-gray);
+        padding: 1rem;
     }
     .contact-container {
         max-width: 1200px;
@@ -107,10 +111,12 @@
         margin-bottom: 2rem;
         font-size: 1.1rem;
         line-height: 1.6;
+        color: var(--secondary-gray);
     }
     .phone {
         margin: 1rem 0;
         font-size: 1.2rem;
+        color: var(--secondary-gray);
     }
     .social-link {
         display: inline-block;
@@ -128,11 +134,13 @@
     }
     .hours {
         margin-bottom: 2rem;
+        color: var(--secondary-gray);
     }
     .hours h3 {
         font-size: 1.5rem;
         margin-bottom: 1rem;
         font-family: 'Cormorant Garamond', serif;
+        color: var(--secondary-gray);
     }
     table {
         width: 100%;
