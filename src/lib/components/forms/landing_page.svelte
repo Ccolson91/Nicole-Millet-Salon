@@ -37,7 +37,7 @@
             $giftCardSubmitted = true;
 
             // Navigate to the deal page
-            goto('/deal-page');
+            goto('/online-offer');
 
         } catch (error) {
             console.error('Error submitting form:', error);
@@ -59,7 +59,7 @@
             <input
                 type="text"
                 id="name"
-                bind:value={FormData.name}
+                bind:value={formData.name}
                 placeholder="Your name"
                 class:error={errors.name}
             />
