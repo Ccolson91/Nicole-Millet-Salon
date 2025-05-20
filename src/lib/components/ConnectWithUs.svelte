@@ -155,18 +155,16 @@
         padding-left: 0;
     }
     table tr td:last-child {
-        width: 40%;
+        text-align: right;
         padding-left: 0;
     }
     @media (max-width: 768px) {
         .contact-container {
-            grid-template-columns: repeat(1, 1fr);
             flex-direction: column;
             gap: 2rem;
         }
         .salon-image, .contact-details {
             width: 100%;
-            align-items: center;
         }
     }
 </style>
