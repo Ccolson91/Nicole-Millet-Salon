@@ -1,5 +1,10 @@
 <script>
-  import SpHeroSection from "$components/SP_HeroSection.svelte";
+  import { goto } from "$app/navigation";
+  import { onMount } from "svelte";
+  import { giftCardSubmitted, paymentSubmitted } from "$lib/stores/formStore";
+  import { SP_HeroSection } from "$components";
+  
+  
 
 </script>
 
@@ -11,4 +16,4 @@
     <meta name="description" content="Get our exclusive new client deal to save 70% off your first visit at Nicole Millet Salon!" />
 </svelte:head>
 
-<SpHeroSection />
+<SP_HeroSection />
