@@ -1,5 +1,6 @@
 <script>
-    import {HeroSection} from '$components';
+    import {HeroSection, LP_FreeGiftReminder} from '$components';
+  import ConnectWithUs from '$components/ConnectWithUs.svelte';
     import RecentWorks from '$components/RecentWorks.svelte';
   import Testimonials from '$components/Testimonials.svelte';
 </script>
@@ -12,3 +13,5 @@
 <HeroSection />
 <RecentWorks />
 <Testimonials />
+  <ConnectWithUs />
+<LP_FreeGiftReminder />

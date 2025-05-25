@@ -3,6 +3,8 @@
   import { onMount } from "svelte";
   import { giftCardSubmitted, paymentSubmitted } from "$lib/stores/formStore";
   import { SP_HeroSection } from "$components";
+  import Terms from "$components/Terms.svelte";
+  import ConnectWithUs from "$components/ConnectWithUs.svelte";
   
   
 
@@ -17,3 +19,5 @@
 </svelte:head>
 
 <SP_HeroSection />
+<Terms />
+<ConnectWithUs />

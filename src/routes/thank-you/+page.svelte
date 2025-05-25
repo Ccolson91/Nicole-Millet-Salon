@@ -1,6 +1,7 @@
 
 <script>
   import { ThankYou } from '$components';
+  import ConnectWithUs from '$components/ConnectWithUs.svelte';
 
 </script>
 
@@ -10,3 +11,4 @@
 </svelte:head>
 
 <ThankYou />
+<ConnectWithUs />

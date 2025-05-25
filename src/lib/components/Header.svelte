@@ -1,22 +1,11 @@
-<script lang="ts">
-    import logo from '$lib/images/NMS_Logo_300x190.png';
+<script>
+  import logo from '$lib/images/NMS_Logo_300x190.png';
 </script>
 
-<nav class="navbar">
-    <div class="container">
-        <div class="logo">
-            <img src={logo} alt="Nicole Millet Salon logo" class="logo-image" />
-        </div>
+<nav class="bg-black text-white py-6 w-full">
+  <div class="flex justify-center items-center h-64 mx-auto px-4">
+    <div class="text-center">
+      <img src={logo} alt="Nicole Millet Salon Logo" class="h-36  w-auto" />
     </div>
+  </div>
 </nav>
-
-<style>
-    .navbar {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: var(--primary-black);
-        padding: 1.5rem 0;
-        width: 100%;
-    }
-</style>

@@ -1,3 +1,5 @@
+@import "tailwindcss";
+
 :root {
   --primary-black: #000000;
   --secondary-gray: #f5f5f5;
@@ -9,6 +11,7 @@
   --success-color: #4caf50;
 }
 
+/*
 *,
 *::after,
 *::before {
@@ -38,13 +41,6 @@ li {
   list-style-type: 0;
 }
 
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  outline: none;
-  font-weight: 400;
-}
 
 body {
   font-family: "Inter Tight", sans-serif;
@@ -61,10 +57,10 @@ p {
 }
 
 /* Global Typography Styles */
-
+/*
 h1 {
   font-size: 80px;
-  line-height: 1.1; /* Adjust as needed for spacing */
+  line-height: 1.1; 
   font-weight: bold;
 }
 
@@ -95,6 +91,7 @@ p {
 }
 
 /* UTILITY CLASSES */
+/*
 .dark-grey {
   color: #5e5e5e;
 }

@@ -13,6 +13,7 @@ export interface PaymentFormData {
     expiryMonth: string;
     expiryYear: string;
     giftRecipientName?: string;
+    giftRecipientEmail?: string;
 }
 
 export interface FormErrors {

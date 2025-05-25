@@ -48,113 +48,49 @@
     }
 </script>
 
-<div class="gift-card-form-container">
-    <div class="form-header">
-        <h2>Want your FREE gift card?</h2>
-        <p>Let us know where to send your FREE $25 gift card and get exclusive access to our new guest beaty package for a limited time only!</p>
+<div class="bg-gray-200/30 rounded-lg p-8 md:p-8 max-w-md mx-auto">
+  <div class="mb-6">
+    <h2 class="text-2xl font-cormorant mb-2">Want your FREE gift card?</h2>
+    <p>Let us know where to send your FREE $25 gift card and get exclusive access to our new guest beauty package for a limited time.</p>
+  </div>
+  
+  <form on:submit|preventDefault={handleSubmit} class="flex flex-col">
+    <div class="mb-6">
+      <label for="name" class="block mb-2 font-medium">Name</label>
+      <input 
+        type="text" 
+        id="name" 
+        bind:value={formData.name} 
+        placeholder="Your name"
+        class="w-full p-3 border border-gray-300 rounded text-base {errors.name ? 'border-red-500' : ''}"
+      />
+      {#if errors.name}
+        <p class="text-red-600 text-sm mt-1">{errors.name}</p>
+      {/if}
     </div>
-    <form on:submit|preventDefault={handleSubmit} class="gift-card-form">
-        <div class="form-group">
-            <label for="name">Name</label>
-            <input
-                type="text"
-                id="name"
-                bind:value={formData.name}
-                placeholder="Your name"
-                class:error={errors.name}
-            />
-            {#if errors.name}
-                <p class="error-message">{errors.name}</p>
-            {/if}
-        </div>
-        <div class="form-group">
-            <label for="email">Email Address</label>
-            <input
-                type="email"
-                id="email"
-                bind:value={formData.email}
-                placeholder="Your email address"
-                class:error={errors.email}
-            />
-            {#if errors.email}
-                <p class="error-message">{errors.email}</p>
-            {/if}
-        </div>
-        <button type="submit" class="submit-button" disabled={isSubmitting}>
-            {isSubmitting ? 'Sending...' : 'Send My Gift Card Now!'}
-        </button>
-        <p class="form-disclaimer">*** Valid for new guests only ***</p>
-    </form>
+    
+    <div class="mb-6">
+      <label for="email" class="block mb-2 font-medium">Email Address</label>
+      <input 
+        type="email" 
+        id="email" 
+        bind:value={formData.email} 
+        placeholder="Your email address"
+        class="w-full p-3 border border-gray-300 rounded text-base {errors.email ? 'border-red-500' : ''}"
+      />
+      {#if errors.email}
+        <p class="text-red-600 text-sm mt-1">{errors.email}</p>
+      {/if}
+    </div>
+    
+    <button 
+      type="submit" 
+      class="bg-[#2d91cd] hover:bg-[#1d6d9e] text-white border-none rounded px-4 py-3 text-base font-medium cursor-pointer transition-colors duration-300 disabled:opacity-70 disabled:cursor-not-allowed"
+      disabled={isSubmitting}
+    >
+      {isSubmitting ? 'Sending...' : 'Send My Gift Card Now!'}
+    </button>
+    
+    <p class="text-center text-sm mt-4 italic">*** Valid for new guests only ***</p>
+  </form>
 </div>
-
-<style>
-    .gift-card-form-container {
-        background-color: rgba(211,211,211,0.3);
-        border-radius: 8px;
-        padding: 2rem;
-        max-width: 500px;
-        margin: 0 auto;
-    }
-    .form-header {
-        margin-bottom: 1.5rem;
-    }
-    .form-header h2 {
-        margin-bottom: 0.5rem;
-    }
-    .gift-card-form {
-        display: flex;
-        flex-direction: column;
-    }
-    .form-group {
-        margin-bottom: 1.5rem;
-    }
-    label {
-        display: block;
-        margin-bottom: 0.5rem;
-        font-weight: 500;
-    }
-    input {
-        width: 100%;
-        padding: 0.75rem;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        font-size: 1rem;
-    }
-    input.error {
-        border-color: var(--error-color);
-    }
-    .error-message {
-        color: var(--error-color);
-        font-size: 0.875rem;
-        margin-top: 0.25rem;
-    }
-    .submit-button {
-        background-color: var(--primary-button);
-        color: white;
-        border: none;
-        border-radius: 4px;
-        padding: 0.75rem 1 rem;
-        font-size: 1rem;
-        font-weight: 500;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-    .submit-button:hover:not(:disabled) {
-        background-color: var(--primary-button-hover);
-    }
-    .submit-button:disabled {
-        opacity: 0.7;
-        cursor: not-allowed;
-    }
-    .form-disclaimer {
-        text-align: center;
-        font-size: 0.875rem;
-        margin-top: 1rem;
-        font-style: italic;
-    }
-    @media (max-width: 768px) {
-        .gift-card-form-container {
-            padding: 1.5rem;
-        }
-    }
-</style>

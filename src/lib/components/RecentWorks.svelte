@@ -26,56 +26,17 @@
     ]
 </script>
 
-<div class="gallery">
-    <h2>Recent Works</h2>
-    <div class="gallery-grid">
-        {#each galleryImages as image}
-        <div class="gallery-item">
-            <img src={image.src} alt={image.alt} />
-        </div>
-        {/each}
-    </div>
+<div class="my-12">
+  <h3 class="text-3xl font-cormorant text-center mb-8">Recent Works</h3>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 px-10">
+    {#each galleryImages as image}
+      <div class="rounded-lg overflow-hidden shadow-md aspect-square">
+        <img 
+          src={image.src} 
+          alt={image.alt} 
+          class="w-full h-full object-cover transition-transform duration-300 hover:scale-105" 
+        />
+      </div>
+    {/each}
+  </div>
 </div>
-
-<style>
-    .gallery {
-        margin: 3rem 0;
-        padding-left: 100px;
-        padding-right: 100px;
-    }
-    .gallery h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-    .gallery-grid {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 1rem;
-    }
-    .gallery-item {
-        border-radius: 8px;
-        overflow: hidden;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        aspect-ratio: 1 / 1;
-    }
-    .gallery-item img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: transform 0.3s ease;
-    }
-    .gallery-item:hover img {
-        transform: scale(1.05);
-    }
-    
-    @media (min-width: 768px) {
-        .gallery-grid {
-            grid-template-columns: repeat(4, 1fr);
-        }
-    }
-    @media (max-width: 576px) {
-        .gallery-grid {
-            grid-template-columns: 1fr;
-        }
-    }
-</style>

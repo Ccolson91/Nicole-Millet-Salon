@@ -2,133 +2,53 @@
     import Checkmark from '$lib/images/checkmark.svg';
 </script>
 
-<div class="thank-you-container">
-    <div class="thank-you-card">
-        <h1>Thank you!</h1>
-
-        <div class="checkmark">
-            <img src={Checkmark} alt="Success checkmark" />
-        </div>
-        <p class="confirmation-message">
-            Your Beauty Bonus voucher is on its way to the email address you used to place your order.
-            It can take up to 5 minutes for your voucher to get to your inbox.
-            If you don't see it, remember to check your promtions tab!
-        </p>
-        <h2>Here's what you do next!</h2>
-        <div class="steps-container">
-            <div class="step">
-                <span class="step-number">Step #1</span>
-                <p><strong>Save</strong> or <strong>print</strong> the email that contains your voucher.</p>
-            </div>
-            <div class="step">
-                <span class="step-numbr">Step #2</span>
-                <p><strong>Call Us</strong> to book your appointment at</p>
-                <p class="phone-number">(225) 421-1206</p>
-            </div>
-            <div class="step">
-                <span class="step-number">Step #3</span>
-                <p><strong>Present</strong> the email on your phone or show us the printed version to redeem your voucher</p>
-            </div>
-        </div>
-        <div class="social-action">
-            <a href="https://www.facebook.com/nicolemilletsalon/" class="facebook-button" target="_blank" rel="noopener noreferrer">Return to Facebook</a>
-        </div>
-        <p class="contact-note">
-            You may contact us at info@nicolemilletsalon.com if you have additional questions
-        </p>
+<div class="max-w-3xl mx-auto">
+  <div class="bg-white p-10 md:p-12 mb-12 text-center">
+    <h1 class="text-4xl md:text-5xl font-cormorant mb-6">Thank you!</h1>
+    
+    <div class="w-20 h-20 mx-auto my-6">
+      <img src={Checkmark} alt="Success Checkmark" class="w-full h-full" />
     </div>
-</div>
-
-<style>
-    .thank-you-container {
-        max-width: 800px;
-        margin: 0 auto;
-    }
-    .thank-you-card {
-        background-color: var(--text-light);
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        padding: 2.5rem 2rem;
-        margin-bottom: 3rem;
-        text-align: center;
-    }
-    .thank-you-card h1 {
-        margin-bottom: 1.5rem;
-        font-size: 2.5rem;
-    }
-    .checkmark {
-        margin: 1.5rem auto;
-        width: 80px;
-        height: 80px;
-    }
-    .checkmark img {
-        width: 100%;
-        height: 100%;
-    }
-    .confirmation-message {
-        font-size: 1.1rem;
-        line-height: 1.6;
-        margin-bottom: 2.5rem;
-    }
-    .thank-you-card h2 {
-        margin-bottom: 2rem;
-        font-size: 1.5rem;
-    }
-    .steps-container {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 1.5rem;
-        margin-bottom: 2.5rem;
-    }
-    .step {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .step-number {
-        font-weight: 600;
-        font-size: 1.1rem;
-        margin-bottom: 0.75rem;
-        color: var(--primary-button);
-    }
-    .phone-number {
-        font-weight: 600;
-        font-size: 1.1rem;
-        margin-top: 0.5rem;
-    }
-    .social-action {
-        margin: 2rem 0;
-    }
-    .facebook-button {
-        display: inline-block;
-        background-color: #4267B2;
-        color: white;
-        border-radius: 4px;
-        padding: 0.75rem 1.5rem;
-        font-weight: 500;
-        transition: background-color 0.3s ease;
-    }
-    .facebook-button:hover {
-        background-color: #365899;
-        color: white;
-    }
-    .contact-note {
-        font-size: 0.95rem;
-        color: #665;
-    }
-    @media (max-width: 768px) {
-        .thank-you-card {
-            padding: 2rem 1.5rem;
-        }
-        .steps-container {
-            grid-template-columns: 1fr;
-        }
-        .thank-you-card h1 {
-            font-size: 2rem;
-        }
-        .thank-you-card h2 {
-            font-size: 1.35rem;
-        }
-    }
-</style>
+    
+    <p class="text-lg leading-relaxed mb-10">
+      Your Beauty Bonus voucher is on its way to the email address you used to place your order. 
+      It can take up to 5 minutes for your voucher to get to your inbox. 
+      If you don't see it, remember to check your promotions tab!
+    </p>
+    
+    <h2 class="text-2xl font-cormorant mb-8">Here's what you do next!</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
+      <div class="flex flex-col items-center text-center shadow-lg rounded">
+        <span class="font-semibold text-lg mb-3 text-[#2d91cd]">Step #1</span>
+        <p><strong>Save</strong> or <strong>print</strong> the email that contains your voucher.</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center shadow-lg rounded">
+        <span class="font-semibold text-lg mb-3 text-[#2d91cd]">Step #2</span>
+        <p><strong>Call Us</strong> to book your appointment at</p>
+        <p class="font-semibold text-lg mt-2">(225) 421-1206</p>
+      </div>
+      
+      <div class="flex flex-col items-center text-center shadow-lg rounded">
+        <span class="font-semibold text-lg mb-3 text-[#2d91cd]">Step #3</span>
+        <p><strong>Present</strong> the email on your phone or show us the printed version to redeem your voucher</p>
+      </div>
+    </div>
+    
+    <div class="my-8">
+      <a 
+        href="https://www.facebook.com/nicolemilletsalon/" 
+        class="inline-block bg-[#4267B2] hover:bg-[#365899] text-white rounded px-6 py-3 font-medium transition-colors duration-300" 
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        Return to Facebook
+      </a>
+    </div>
+    
+    <p class="text-sm text-gray-600">
+      You may contact us at <strong>info@nicolemilletsalon.com</strong> if you have additional questions
+    </p>
+  </div>
+  </div>

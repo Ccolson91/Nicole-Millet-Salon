@@ -29,67 +29,23 @@
         </svg>`;
 </script>
 
-<div class="testimonials">
-    <h2>What Our Clients Say</h2>
-    <div class="testimonial-grid">
-        {#each testimonials as testimonial}
-        <div class="testimonial-card">
-            <div class="stars">
-                {#each Array(testimonial.rating) as _, i}
-                    <span>{@html starSvg}</span>
-                {/each}
-            </div>
-            <div class="quote">
-                <p>"{testimonial.quote}"</p>
-            </div>
-            <div class="author">
-                <p><strong>{testimonial.name}</strong></p>
-            </div>
+<div class="my-12">
+  <h3 class="text-3xl font-cormorant text-center mb-8">What Our Clients Say</h3>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-10">
+    {#each testimonials as testimonial}
+      <div class="bg-white rounded-lg shadow-md p-8 flex flex-col gap-4">
+        <div class="flex gap-1 mb-2">
+          {#each Array(testimonial.rating) as _, i}
+            <span>{@html starSvg}</span>
+          {/each}
         </div>
-        {/each}
-    </div>
+        <div class="italic leading-relaxed">
+          <p>"{testimonial.quote}"</p>
+        </div>
+        <div class="mt-auto text-right">
+          <p class="font-medium">{testimonial.name}</p>
+        </div>
+      </div>
+    {/each}
+  </div>
 </div>
-
-<style>
-    .testimonials {
-        margin: 3rem 0;
-        padding-left: 100px;
-        padding-right: 100px;
-    }
-    .testimonials h2 {
-        text-align: center;
-        margin-bottom: 2rem;
-    }
-    .testimonial-grid {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 2rem;
-    }
-    .testimonial-card {
-        background-color: var(--text-light);
-        border-radius: 8px;
-        box-shadow: 0 2px 8px rgba(0,0,0,01);
-        padding: 2rem;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-    }
-    .stars {
-        display: flex;
-        gap: 0.25rem;
-        margin-bottom: 0.5rem;
-    }
-    .quote {
-        font-style: italic;
-        line-height: 1.6;
-    }
-    .author {
-        margin-top: auto;
-        text-align: right;
-    }
-    @media (min-width: 768px) {
-        .testimonial-grid {
-            grid-template-columns: repeat(3, 1fr);
-        }
-    }
-</style>
