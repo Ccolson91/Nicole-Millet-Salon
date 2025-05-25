@@ -6,7 +6,7 @@
 <div class="bg-[#f5f5f5] py-8 mb-8">
   <div class="max-w-7xl mx-auto px-4">
     <h1 class="text-center text-4xl md:text-[2.5rem] font-semibold font-cormorant mb-8">Receive a Free $25 Gift Card towards your first service!</h1>
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+    <div class="grid grid-cols-1 lg:grid-cols-[2fr_500px] gap-8 items-start">
       <div class="flex flex-col gap-6">
         <img 
           src={dealPageImage} 

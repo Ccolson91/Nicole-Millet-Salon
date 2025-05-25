@@ -21,7 +21,7 @@
     <h1 class="text-center text-3xl md:text-4xl font-semibold font-cormorant mb-4">Get our exclusive new client deal to save 70% off your first visit!</h1>
     <h2 class="text-center text-xl md:text-2xl font-normal mb-8">Check below for details and reserve your spot today!</h2>
     
-    <div class="grid grid-cols-1 lg:grid-cols-[2fr__500px] gap-8 items-start">
+    <div class="grid grid-cols-1 lg:grid-cols-[2fr_500px] gap-8 items-start">
       <div class="flex flex-col gap-6">
         <img 
           src={SP_Image} 
